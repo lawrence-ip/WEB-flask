@@ -1,34 +1,28 @@
-{% extends "layout.html" %} {% block title %} Contact - Form {% endblock %}
-<!---->
+{% extends "layout.html" %} 
+{% block title %} Job Search {% endblock %}
+
 {% block content %}
 <div style="--d: flex; --fd:column">
-<h1>Introducing Startr Web Kit!</h1> 
-<p>Our comprehensive package is designed to help you swiftly create and deploy web applications, with no hidden costs. You&apos;ll be amazed at how easy it is to build public pages, set up a members-only section, enable pro features, and seamlessly integrate billing and checkout functionalities&mdash;all with less than 256 lines of code.</p>
+    <h1>Welcome to JobSearch!</h1> 
+    <p>Find your dream job with ease. JobSearch is a comprehensive platform designed to connect job seekers like you with exciting career opportunities.</p>
 
-<p>With Startr Web Kit, your development team can transform from zero to a fully functional core business logic in just one weekend. Best of all, don't burn your capital on software during your product-market-fit search phase. There's no hidden costs.</p>
+    <p>Whether you're a seasoned professional or just starting your career, JobSearch provides a wide range of job listings in various industries and locations. Discover new possibilities and take the next step towards your professional goals.</p>
 
-<p>Our kit leverages the power of our exceptional open-source libraries, combined with popular online payment service providers, to assemble multiuser applications that actually work. The technology stack we provide, which includes top-notch tools like SQLite, Python, and NGINX, empowers you to effortlessly manage more than 10,000 simultaneous connections, all while utilizing mere megabytes of memory.</p>
+    <p>With JobSearch, you can explore job openings, submit applications, and connect with potential employers all in one place. Our user-friendly interface and powerful search features make it simple to find the perfect job that matches your skills and interests.</p>
 </div>
 
-
 <div>
-<h2>Example App - Submit your CV</h2>
-<p>Fill out the form below to submit your CV.</p>
+    <h2>Get Started</h2>
+    <p>Choose your role:</p>
+    <div>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <a href="/jobseeker_login">
+            <button>Job Seeker</button>
+        </a>
+        <a href="/employer_login">
+            <button>Employer</button>
+        </a>
+    </div>
+</div>
 
-<form action="/free_page" method="POST" enctype="multipart/form-data">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required />
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required />
-  <label for="job_description">Job Description:</label>
-  <input
-    for="job_description"
-    id="job_description"
-    name="job_description"
-    required
-  />
-  <label for="cv">CV (PDF or DOCX):</label>
-  <input type="file" id="cv" name="cv" accept=".pdf,.docx" required />
-  <input type="submit" value="Submit" />
-</form>
 {% endblock %}

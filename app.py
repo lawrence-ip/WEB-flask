@@ -1,7 +1,7 @@
 from flask import Flask, flash, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, LoginManager, login_user, logout_user, login_required, current_user
-
+from flask_dance.contrib.google import make_google_blueprint, google
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -47,7 +47,6 @@ class User(UserMixin, db.Model):
 
 with app.app_context():
     db.create_all()
-
 
 @login_manager.user_loader
 def load_user(user_id):
