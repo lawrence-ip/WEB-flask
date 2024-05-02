@@ -1,0 +1,27 @@
+<!-- templates/about.html -->
+{% extends "layout.html" %} 
+{% block title %}About{% endblock %}
+
+{% block content %}
+<h1>About Us</h1>
+
+<div id="scrollContainer" class="about-us-container">
+    <div style="--d: flex; --fd:column">
+      <h2>Our Mission</h2>
+      <p>We specialize in leveraging data science skills to revolutionize the employment process. Our primary goal is to connect job seekers with the perfect opportunities by utilizing advanced clustering techniques. By carefully analyzing various factors, we ensure that both job seekers and employers find the best match.</p>
+  
+    <h2>Transparency and Best Outcomes</h2>
+    <p>Transparency is at the core of our approach. We believe that by providing clear and accurate information, we enable job seekers and employers to make informed decisions, leading to the most favorable outcomes. Our commitment to removing market inefficiencies enables us to streamline the hiring process, benefiting both candidates and employers alike.</p>
+
+    <h2>Creating a Seamless and Efficient Job Market</h2>
+    <p>With our innovative approach, we aim to create a seamless and efficient job market that maximizes the potential for success. By leveraging data science and advanced algorithms, we ensure that job seekers and employers can navigate the employment landscape with ease. Our goal is to create a platform that optimizes the matching process and eliminates unnecessary barriers.</p>
+
+    <h2>About Our Founder</h2>
+    <div>
+        <img src="{{ url_for('static', filename='founder.jpg') }}" alt="Founder Image" style="width: 300px; height: auto;">
+        <p>Our company was founded by Lawrence Ip, a visionary leader with a deep passion for leveraging data science in the job market. With extensive experience in the industry, Lawrence recognized the need for a more efficient and transparent approach to connecting job seekers and employers. Their expertise and dedication have been instrumental in shaping our company's mission and driving its success.</p>
+    </div>
+</div>
+
+<h2>{{ message }}</h2>
+{% endblock %}

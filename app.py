@@ -1,7 +1,7 @@
 from flask import Flask, flash, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, LoginManager, login_user, logout_user, login_required, current_user
-from flask_dance.contrib.google import make_google_blueprint, google
+# from flask_dance.contrib.google import make_google_blueprint, google
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -83,8 +83,8 @@ def index():
 
 @app.route('/about')
 def about():
-    return swuped('This is the about page.', link="/contact", message="Go to the contact page.")
-
+    # return swuped('This is the about page.', link="/contact", message="Go to the contact page.")
+    return render_template('about.html')
 
 @app.route('/contact')
 def contact():
